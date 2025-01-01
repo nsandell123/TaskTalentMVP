@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .chat-box {
+    margin: 20px 0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f9f9f9;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .input-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .input-container input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .input-container button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  

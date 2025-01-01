@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Botpress Webchat</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f9;
+      }
+
+      .webchat {
+        height: 600px;
+        width: 400px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="webchat" style="height: 600px; width: 400px;">
+      <iframe
+        style="height: 100%; width: 100%; border: none;"
+        srcdoc='
+        <!doctype html>
+        <html lang="en">
+          <head></head>
+          <body>
+            <script src="https://cdn.botpress.cloud/webchat/v2/inject.js"></script>
+            <script defer>
+              window.botpress.on("webchat:ready", (conversationId) => {
+                botpress.open();
+              });
+              window.botpress.init({
+                botId: "ff784dc8-20a5-4dfd-81b2-9a38787a5e6b",
+                clientId: "6ba7c0a8-5d09-43bb-bdc3-43b39b4c2a52",
+                configuration: {
+                  color: "#3B82F6",
+                  themeMode: "light",
+                  fontFamily: "Arial",
+                  radius: 8,
+                  composerPlaceholder: "Type your message...",
+                  enableConversationDeletion: true,
+                  showPoweredBy: false,
+                  hideWidget: true,
+                  layoutWidth: "100%",
+                  containerWidth: "100%",
+                  showCloseButton: false,
+                  disableAnimations: false,
+                  closeOnEscape: false,
+                  showConversationsButton: false
+                }
+              });
+            </script>
+          </body>
+        </html>'
+      ></iframe>
+    </div>
+  </body>
+</html>
